@@ -47,6 +47,8 @@ h1 ping h2
 * Real-time packet logs displayed in terminal
 * Logs saved in `packet_logs.csv`
 
+  ![](sdn-packet-logger.png)
+
 ##  Working
 
 The controller listens for packet-in events from switches.
