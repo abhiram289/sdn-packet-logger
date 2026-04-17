@@ -20,6 +20,27 @@ This project implements a Software Defined Networking (SDN) controller using Ryu
 * Identifies protocol types (ARP, ICMP, TCP, UDP)
 * Stores logs in a CSV file
 
+##  How to Run (On Linux Machines)
+A virtual environment is recommended.
+Open 2 Terminal windows. 
+
+### 1. Start the Controller (Terminal 1)
+
+```bash
+sudo ~/.pyenv/versions/sdn-env/bin/ryu-manager --ofp-tcp-listen-port 6653 packet_logger.py
+```
+
+### 2. Start Mininet (Terminal 2)
+
+```bash
+sudo PYTHONPATH=$HOME/mininet ~/mininet/bin/mn --topo linear,3 --controller=remote,ip=127.0.0.1,port=6653
+```
+
+Inside Mininet:
+
+```bash
+h1 ping h2
+```
 
 ##  Output
 
@@ -34,4 +55,3 @@ It extracts packet details, identifies the protocol, logs the data, and forwards
 ## Author
 
 [Abhiram](https://github.com/abhiram289/)
-
