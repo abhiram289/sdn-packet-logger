@@ -22,7 +22,7 @@ This project implements a Software Defined Networking (SDN) controller using Ryu
 
 ##  How to Run (On Linux Machines)
 A virtual environment is recommended.
-Open 2 Terminal windows. 
+To be run on two terminal windows.
 
 ### 1. Start the Controller (Terminal 1)
 
